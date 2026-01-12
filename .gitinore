@@ -1,0 +1,19 @@
+# En la carpeta de tu proyecto
+git init
+
+# Configurar usuario
+git config --global user.name "Noely"
+git config --global user.email "noelyacuaa@abc.gob.ar"
+
+# Agregar todos los archivos
+git add .
+
+# Primer commit
+git commit -m "Primer commit: Editor de CV"
+
+# Conectar con GitHub
+git branch -M main
+git remote add origin https://github.com/patiCorti/editor-cv-.git
+
+# Subir al repositorio
+git push -u origin main

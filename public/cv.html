@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CV - Community Manager</title>
+    <link rel="stylesheet" href="style-cv.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&family=Montserrat:wght@400;500;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="cv-container" id="cvContainer">
+        <div class="cv-header">
+            <div class="profile-section">
+                <div class="avatar-container">
+                    <img id="cvAvatar" src="assets/avatars/default.png" alt="Foto perfil" class="profile-avatar">
+                </div>
+                <div class="profile-info">
+                    <h1 id="cvName">TU NOMBRE AQUÍ</h1>
+                    <h2 id="cvTitle">Community Manager</h2>
+                </div>
+            </div>
+            
+            <div class="contact-info">
+                <div class="contact-item" id="cvEmail">
+                    <i class="fas fa-envelope"></i>
+                    <span>tu@email.com</span>
+                </div>
+                <div class="contact-item" id="cvPhone">
+                    <i class="fas fa-phone"></i>
+                    <span>+54 9 11 1234-5678</span>
+                </div>
+                <div class="contact-item" id="cvLocation">
+                    <i class="fas fa-map-marker-alt"></i>
+                    <span>Ciudad, País</span>
+                </div>
+                <div class="contact-item" id="cvLinkedin">
+                    <i class="fab fa-linkedin"></i>
+                    <span>linkedin.com/in/tuperfil</span>
+                </div>
+            </div>
+        </div>
+
+        <div class="cv-content">
+            <div class="left-column">
+                <section class="cv-section" id="perfilSection">
+                    <h3><i class="fas fa-user-tie"></i> PERFIL PROFESIONAL</h3>
+                    <p>Fato de perfil</p>
+                </section>
+
+                <section class="cv-section" id="capacitacionesSection">
+                    <h3><i class="fas fa-graduation-cap"></i> CAPACITACIONES</h3>
+                    <ul>
+                        <li>Community Manager certificado</li>
+                        <li>Reparación de PC</li>
+                        <li>Diseño gráfico Canva</li>
+                    </ul>
+                </section>
+
+                <section class="cv-section" id="habilidadesSection">
+                    <h3><i class="fas fa-tools"></i> HABILIDADES</h3>
+                    <div class="skills-grid">
+                        <!-- Habilidades se cargarán aquí -->
+                    </div>
+                </section>
+            </div>
+
+            <div class="right-column">
+                <section class="cv-section" id="formacionSection">
+                    <h3><i class="fas fa-university"></i> FORMACIÓN</h3>
+                    <p>Información de formación académica</p>
+                </section>
+
+                <section class="cv-section" id="experienciaSection">
+                    <h3><i class="fas fa-briefcase"></i> EXPERIENCIA</h3>
+                    <p>Experiencia laboral relevante</p>
+                </section>
+
+                <section class="cv-section" id="proyectosSection">
+                    <h3><i class="fas fa-project-diagram"></i> PROYECTOS</h3>
+                    <p>Proyectos destacados</p>
+                </section>
+            </div>
+        </div>
+
+        <div class="cv-footer">
+            <p>CV generado con Editor de CV para Community Managers</p>
+            <button id="printBtn" class="print-btn">
+                <i class="fas fa-print"></i> Imprimir / PDF
+            </button>
+        </div>
+    </div>
+
+    <script src="cv-viewer.js"></script>
+    <script>
+        // Cargar datos desde localStorage
+        document.addEventListener('DOMContentLoaded', function() {
+            const cvViewer = new CVViewer();
+            cvViewer.loadCVData();
+            
+            // Botón de impresión
+            document.getElementById('printBtn').addEventListener('click', function() {
+                window.print();
+            });
+        });
+    </script>
+</body>
+</html>
